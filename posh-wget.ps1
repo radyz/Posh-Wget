@@ -8,10 +8,10 @@
         [string]$FilePath
     )
 
-    #if ([string]::IsNullOrWhiteSpace($FilePath))
-    #{
-     #   $FilePath = [string]::Format("{0}\{1}", (Get-Location).Path, [System.IO.Path]::GetFileName($Url)) 
-    #}
+    if ([string]::IsNullOrWhiteSpace($FilePath))
+    {
+        $FilePath = [string]::Format("{0}\{1}", (Get-Location).Path, [System.IO.Path]::GetFileName($Url)) 
+    }
 
     try
     {
